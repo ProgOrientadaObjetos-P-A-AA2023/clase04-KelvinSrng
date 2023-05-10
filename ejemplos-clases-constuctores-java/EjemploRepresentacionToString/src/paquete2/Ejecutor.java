@@ -15,5 +15,13 @@ public class Ejecutor {
         fac.calcularValorFactura(); 
         
         System.out.printf("%s\n", fac);
+        
+        
+        
+        FacturaTelefonica fac2 = new FacturaTelefonica();
+        // se llama al método que calcula el valor de la factura
+        fac.calcularValorFactura(); 
+        
+        System.out.printf("%s\n", fac2);
     }
 }

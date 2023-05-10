@@ -63,7 +63,7 @@ public class FacturaTelefonica {
 
     @Override
     public String toString() {
-        String cadena = String.format("Los datos de factura\n"
+        String cadena = String.format("Los datos de factura\n" // String.format es como un print
                 + "Número de teléfono: %s\n"
                 + "Minutos mes: %.2f\n"
                 + "Valor minuto: %.2f\n"
@@ -74,5 +74,20 @@ public class FacturaTelefonica {
                 obtenerValorFactura());
         return cadena;
     }
-
+    
+    /*@Override
+    Esto es exacramente igual el anterior toString
+    public String toString() {
+        String cadena = String.format("Los datos de factura\n" // String.format es como un print
+                + "Número de teléfono: %s\n"
+                + "Minutos mes: %.2f\n"
+                + "Valor minuto: %.2f\n"
+                + "valor factura: %.2f\n",
+                obtenerNumeroTelefono(),
+                obtenerMinutosMes(),
+                obtenerValorMinuto(),
+                obtenerValorFactura());
+        return cadena;
+    }
+    */
 }

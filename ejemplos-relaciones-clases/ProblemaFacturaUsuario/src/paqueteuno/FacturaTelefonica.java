@@ -17,7 +17,7 @@ public class FacturaTelefonica {
     private double valorFactura;
     private Usuario usuario;
     
-    public FacturaTelefonica(String num, double minutos, double valorMin,
+    public FacturaTelefonica (String num, double minutos, double valorMin,
             Usuario u){
         numeroTelefono = num;
         minutosMes = minutos;
@@ -64,5 +64,24 @@ public class FacturaTelefonica {
     public Usuario obtenerUsuario(){
         return usuario;
     }
- 
+    
+    public String toString() {
+        String mensaje = String.format("Factura de Teléfono\n" +
+                "Nombre: %s\n" +
+                "Apellido: %s\n" +
+                "Identificación: %s\n" +
+                "Número de teléfono: %s\n" +
+                "Minutos mensuales: %.2f\n" +
+                "Valor por minuto: %.2f\n" +
+                "Valor a cancelar: %.2f\n",
+                // obtenerUsuario().obtenerNombre(),
+                usuario.obtenerNombre(),
+                obtenerUsuario().obtenerApellido(),
+                obtenerUsuario().obtenerIdentificacion(),
+                obtenerNumeroTelefono(),
+                obtenerMinutosMes(),
+                obtenerValorMinuto(),
+                obtenerValorFactura());
+        return mensaje;
+    }
 }
